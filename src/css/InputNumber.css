@@ -1,0 +1,87 @@
+.input-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  height: 100px; /* Increased height to accommodate arrows */
+  z-index: 10; /* Bring to front */
+}
+
+.input-number {
+  font-family: var(--primary-font);
+  font-size: 72px;
+  /*  font-weight: bold;*/
+  font-weight: 400;
+  font-style: normal;
+  color: var(--input-number-color);
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+}
+
+/* .arrow {
+  position: absolute;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--input-number-color);
+  visibility: hidden; 
+  user-select: none;
+  z-index: 1; 
+} */
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  visibility: hidden; /* Hide arrows by default */
+  user-select: none;
+  z-index: 12; /* Ensure arrows are above other content */
+  width: 24px; /* Set a consistent size for the arrow images */
+  height: 24px;
+}
+
+.arrow-up {
+  right: 2px; /* Position the up arrow above the container */
+  top: 25px;
+}
+
+.arrow-down {
+  right: 2px;
+  bottom: 25px; /* Position the down arrow below the container */
+}
+
+.input-number-container:hover .arrow {
+  visibility: visible; /* Show arrows on hover */
+}
+
+/* POSITIONING CLASSES */
+
+.top-left {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-self: start;
+  align-self: start;
+}
+
+.top-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: start;
+}
+
+.bottom-left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  justify-self: start;
+  align-self: end;
+}
+
+.bottom-right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  justify-self: end;
+  align-self: end;
+}

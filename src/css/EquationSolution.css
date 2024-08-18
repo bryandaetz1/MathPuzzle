@@ -1,0 +1,43 @@
+.equation-solution {
+  position: absolute;
+  font-family: var(--primary-font);
+  font-size: 65px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--equation-solution-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+}
+
+.equation-solution.correct {
+  color: var(--equation-solution-color-correct);
+}
+
+/* EQUATION SOLUTION POSITIONING */
+.top-solution {
+  top: -10px; /* Adjust as needed to position above the top edge */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left-solution {
+  left: -10px; /* Adjust as needed to position to the left of the left edge */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-solution {
+  right: -10px; /* Adjust as needed to position to the right of the right edge */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom-solution {
+  bottom: -10px; /* Adjust as needed to position below the bottom edge */
+  left: 50%;
+  transform: translateX(-50%);
+}
